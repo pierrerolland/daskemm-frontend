@@ -14,8 +14,8 @@
     },
     computed: {
       local: {
-        get() { return this.value },
-        set(local: string) {this.$emit('input', local)}
+        get() { return (this as any).value },
+        set(local: string) {(this as any).$emit('input', local)}
       }
     }
   }
